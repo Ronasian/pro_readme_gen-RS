@@ -34,7 +34,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return "# " + data.title + " • " + renderLicenseBadge(data.license) + "\n\n" +
   "## Description\n" + data.description + "\n\n" +
-  "## Table of Contents\n" + '[Installation](#install)\n' +  '[Usage](#use)\n' + '[Credits](#creds)\n' + '[Tests](#test)\n' + renderLicenseLink(data.license)[0] + "\n" + '[Questions](#ques)\n\n' +
+  "## Table of Contents\n" + '[Installation](#install)' + '\n' +  '[Usage](#use)\n' + '[Credits](#creds)\n' + '[Tests](#test)\n' + renderLicenseLink(data.license)[0] + "\n" + '[Questions](#ques)\n\n' +
   "<a name='install'>\n\n" +
   "## Installation\n" + data.installation + "\n\n" +
   "<a name='use'>\n\n" +
