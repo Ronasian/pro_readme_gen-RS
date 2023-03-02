@@ -3,43 +3,74 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
-// const prompts = [
-//     "Enter the project's title",
-//     "Enter the project's description",
-//     "Enter the project's installation instructions",
-//     "Enter the project's usage information",
-//     "Enter the project's contribution guidelines",
-//     "Enter the project's test instructions",
-//     "Choose a license for your application",
-//     "Enter your Github username",
-//     "Enter your email address"
-// ];
-inquirer
+const prompts = [];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    console.log(data);
+    fs.writeFile(fileName, generateMarkdown(data), (err) => err ? console.log(err) : console.log('Success!')
+    );
+}
+// TODO: Create a function to initialize app
+function init() {
+  inquirer
   .prompt([
     {
       type: 'input',
-      name: 'name',
-      message: 'What is your name?',
+      name: 'title',
+      message: "Enter the project's title",
     },
     {
-      type: 'checkbox',
-      message: 'What languages do you know?',
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+      type: 'input',
+      name: 'description',
+      message: "Enter the project's description",
+    },
+    {
+      type: 'input',
+      name: 'installation',
+      message: "Enter the project's installation instructions",
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: "Enter the project's usage information",
+    },
+    {
+      type: 'input',
+      name: 'contributing',
+      message: "Enter the project's contribution guidelines",
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: "Enter the project's test instructions",
     },
     {
       type: 'list',
-      message: 'What is your preferred method of communication?',
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
+      message: "Choose a license for your application",
+      name: 'license',
+      choices: ['option1', 'option2', 'option3', 'option4'],
+    },
+    {
+      type: 'input',
+      name: 'username',
+      message: "Enter your Github username",
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: "Enter your email address",
     },
   ])
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
+  .then((data) => {
+    if (data.title.indexOf(' ') !== -1) {
+        var title = data.title.split(' ').join('') + '.md';
+    } else {
+        var title = data.title + '.md';
+    }
+    writeToFile(title, data);
+  });
+}
 
 // Function call to initialize app
 init();
