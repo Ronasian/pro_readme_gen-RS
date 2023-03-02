@@ -63,12 +63,7 @@ function init() {
     },
   ])
   .then((data) => {
-    if (data.title.indexOf(' ') !== -1) {
-        var title = data.title.split(' ').join('') + '.md';
-    } else {
-        var title = data.title + '.md';
-    }
-    writeToFile(title, data);
+    writeToFile('README.md', data);
   });
 }
 
