@@ -42,7 +42,7 @@ function generateMarkdown(data) {
   "## Description\n" + data.description + "\n\n" +
   "## Installation\n" + data.installation + "\n\n" +
   "## Usage\n" + data.usage + "\n\n" +
-  "## Contributing\n" + data.contributing + "\n\n" +
+  "## Credits\n" + data.contributing + "\n\n" +
   "## Tests\n" + data.tests + "\n\n" +
   renderLicenseSection(data.license) + "\n\n" +
   "## Questions\n" + "GitHub: " + data.username + "\n" + 

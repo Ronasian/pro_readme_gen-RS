@@ -18,48 +18,48 @@ function init() {
     {
       type: 'input',
       name: 'title',
-      message: "Enter the project's title:",
+      message: "What is the title of your project?",
     },
     {
       type: 'input',
       name: 'description',
-      message: "Enter the project's description:",
+      message: "What is the purpose of this project; what problem does it solve?",
     },
     {
       type: 'input',
       name: 'installation',
-      message: "Enter the project's installation instructions:",
+      message: "What are the steps to installing your project?",
     },
     {
       type: 'input',
       name: 'usage',
-      message: "Enter the project's usage information:",
+      message: "How is your application used?",
     },
     {
       type: 'input',
       name: 'contributing',
-      message: "Enter the project's contribution guidelines:",
+      message: "Who contributed to this project?",
     },
     {
       type: 'input',
       name: 'tests',
-      message: "Enter the project's test instructions:",
+      message: "How can users test this application?",
     },
     {
       type: 'list',
-      message: "Choose a license for your application:",
+      message: "Which license will you use for this project?",
       name: 'license',
       choices: ['Apache 2.0 License', 'GNU GPL v3', 'The MIT License'],
     },
     {
       type: 'input',
       name: 'username',
-      message: "Enter your Github username",
+      message: "What is your GitHub username?",
     },
     {
       type: 'input',
       name: 'email',
-      message: "Enter your email address",
+      message: "What is your email address?",
     },
   ])
   .then((data) => {
