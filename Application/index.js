@@ -18,38 +18,38 @@ function init() {
     {
       type: 'input',
       name: 'title',
-      message: "Enter the project's title",
+      message: "Enter the project's title:",
     },
     {
       type: 'input',
       name: 'description',
-      message: "Enter the project's description",
+      message: "Enter the project's description:",
     },
     {
       type: 'input',
       name: 'installation',
-      message: "Enter the project's installation instructions",
+      message: "Enter the project's installation instructions:",
     },
     {
       type: 'input',
       name: 'usage',
-      message: "Enter the project's usage information",
+      message: "Enter the project's usage information:",
     },
     {
       type: 'input',
       name: 'contributing',
-      message: "Enter the project's contribution guidelines",
+      message: "Enter the project's contribution guidelines:",
     },
     {
       type: 'input',
       name: 'tests',
-      message: "Enter the project's test instructions",
+      message: "Enter the project's test instructions:",
     },
     {
       type: 'list',
-      message: "Choose a license for your application",
+      message: "Choose a license for your application:",
       name: 'license',
-      choices: ['option1', 'option2', 'option3', 'option4'],
+      choices: ['Apache 2.0 License', 'GNU GPL v3', 'The MIT License'],
     },
     {
       type: 'input',
