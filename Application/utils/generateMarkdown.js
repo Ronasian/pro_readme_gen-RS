@@ -46,8 +46,8 @@ function generateMarkdown(data) {
   renderLicenseLink(data.licnese)[1] + "\n\n" +
   renderLicenseSection(data.license) + "\n\n" +
   "<a name='ques'>\n\n" +
-  "## Questions\n" + "GitHub: " + data.username + "\n" + 
-  "Email: " + data.email
+  "## Questions\n" + `Link to my GitHub: https://github.com/${data.username}`+ "\n\n" + 
+  `For additional questions about this application, email me at ${data.email}`
 }
 
 module.exports = generateMarkdown;
