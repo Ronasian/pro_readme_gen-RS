@@ -1,11 +1,12 @@
 // Packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Function to write README file
 function writeToFile(fileName, data) {
     console.log(data);
-    fs.writeFile(fileName, generateMarkdown(data), (err) => err ? console.log(err) : console.log('README.md File Generated!');
+    fs.writeFile(fileName, generateMarkdown(data), (err) => err ? console.log(err) : console.log('README.md File Generated!')
     );
 }
 // Function to initialize app
