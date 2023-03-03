@@ -30,7 +30,8 @@ THEN I am taken to the corresponding section of the README
 ```
 
 ## Usage
-
+Users must access the application file directory in the terminal and use <node index.js> to initiate the program.
+Link to video demo: https://drive.google.com/file/d/1j_yPhnxQ0Erm897YNs2SW2daTzCrGech/view
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
